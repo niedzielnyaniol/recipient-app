@@ -1,4 +1,5 @@
 node_modules/
-server/build/
-server/tmp/
-server/temp/
+packages/server/build/
+packages/server/tmp/
+packages/server/temp/
+packages/server/ormconfig.json
