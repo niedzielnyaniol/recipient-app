@@ -1,3 +1,4 @@
+import 'antd/dist/antd.css';
 import * as React from 'react';
 
 class App extends React.Component {

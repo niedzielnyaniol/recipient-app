@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "antd": "^3.8.3",
     "react": "^16.4.2",
     "react-dom": "^16.4.2"
   },
@@ -20,7 +21,7 @@
     "build": "react-scripts-ts build",
     "test": "react-scripts-ts test --env=jsdom",
     "eject": "react-scripts-ts eject",
-    "cosmos": "cosmos --config ./cosmos.config.js",
+    "cosmos": "cosmos",
     "cosmos:export": "cosmos-export"
   }
 }
