@@ -23,7 +23,7 @@
       "@types/node": "^8.0.29",
       "@types/ws": "^6.0.0",
       "nodemon": "^1.18.3",
-      "ts-node": "3.3.0",
+      "ts-node": "^3.3.0",
       "tslint": "^5.11.0",
       "tslint-config-airbnb": "^5.10.0",
       "tslint-config-prettier": "^1.15.0"
