@@ -1,8 +1,8 @@
-import Index from '.';
+import IndexPage from './';
 
 export default [
   {
-    component: Index,
+    component: IndexPage,
     name: 'defaultView',
   },
 ]
