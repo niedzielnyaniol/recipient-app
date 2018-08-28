@@ -2,7 +2,7 @@ import { Form, Input as AInput } from 'antd';
 import * as React from 'react';
 import noop from '../../../utils/noop';
 
-const Input: React.SFC<IPropTypes> = ({
+const Input: React.SFC<PropTypes> = ({
   onChange,
   onBlur,
   name,
@@ -23,17 +23,17 @@ const Input: React.SFC<IPropTypes> = ({
       placeholder={placeholder}
     />
   </Form.Item>
-)
+);
 
-interface IPropTypes {
-  onChange?: (e: React.SyntheticEvent) => void,
-  name?: string,
-  onBlur?: () => void,
-  value?: string,
-  errorText?: string,
-  showError?: boolean,
-  placeholder?: string,
-};
+interface PropTypes {
+  onChange?: (e: React.SyntheticEvent) => void;
+  name?: string;
+  onBlur?: () => void;
+  value?: string;
+  errorText?: string;
+  showError?: boolean;
+  placeholder?: string;
+}
 
 Input.defaultProps = {
   errorText: '',
@@ -43,6 +43,6 @@ Input.defaultProps = {
   placeholder: '',
   showError: false,
   value: '',
-}
+};
 
 export default Input;

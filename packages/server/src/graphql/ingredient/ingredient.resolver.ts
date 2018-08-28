@@ -1,5 +1,5 @@
-import { ResolverMap } from "../../types/ResolverType";
-import { Ingredient } from "../../entity/Ingredient";
+import { ResolverMap } from '../../types/ResolverType';
+import { Ingredient } from '../../entity/Ingredient';
 
 const resolver: ResolverMap = {
   Query: {
@@ -7,10 +7,10 @@ const resolver: ResolverMap = {
     ingredients: () => Ingredient.find(),
   },
   Mutation: {
-    addIngredient: async (_, args) =>  await Ingredient.create(args).save(),
-    updateIngredient: async (_, {id, ...args}) => {
+    addIngredient: async (_, args) =>  Ingredient.create(args).save(),
+    updateIngredient: async (_, { id, ...args }) => {
       let ingredient = null;
-      
+
       try {
         ingredient = await Ingredient.update(id, args);
       } catch (err) {
@@ -27,7 +27,7 @@ const resolver: ResolverMap = {
       }
 
       return true;
-    }
+    },
   },
 };
 

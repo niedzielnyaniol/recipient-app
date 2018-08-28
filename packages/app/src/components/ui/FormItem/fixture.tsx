@@ -10,10 +10,10 @@ export default [
     props: {
       children: <Input />,
       name: 'inputName',
-      onBlur: (name:string, isTouched: string) => { action(name, isTouched); },
-      onChange: (name:string, val: string) => { action(val); },
+      onBlur: (name: string, isTouched: string) => { action(name, isTouched); },
+      onChange: (name: string, val: string) => { action(val); },
       value: '',
-    }
+    },
   },
   {
     component: FormItem,
@@ -21,10 +21,10 @@ export default [
     props: {
       children: <Input />,
       name: 'input',
-      onBlur: (name:string, isTouched: string) => { action(name, isTouched); },
-      onChange: (name:string, val: string) => { action(name, val); },
+      onBlur: (name: string, isTouched: string) => { action(name, isTouched); },
+      onChange: (name: string, val: string) => { action(name, val); },
       value: 'Text',
-    }
+    },
   },
   {
     component: FormItem,
@@ -33,10 +33,10 @@ export default [
       children: <Input />,
       errorText: 'Error',
       name: 'input',
-      onBlur: (name:string, isTouched: string) => { action(name, isTouched); },
-      onChange: (name:string, val: string) => { action(name, val); },
+      onBlur: (name: string, isTouched: string) => { action(name, isTouched); },
+      onChange: (name: string, val: string) => { action(name, val); },
       showError: true,
       value: 'Text',
-    }
-  }
-]
+    },
+  },
+];

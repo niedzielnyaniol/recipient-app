@@ -1,16 +1,16 @@
 import * as React from 'react';
 
-interface IPropTypes {
-  children: React.ReactElement<React.ReactChild>,
-  name: string,
-  onChange: (arg1: string, arg2: string | boolean) => void,
-  onBlur: (arg1: string, arg2: boolean) => void,
-  value: string | boolean,
-  errorText?: string,
-  showError?: boolean,
+interface PropTypes {
+  children: React.ReactElement<React.ReactChild>;
+  name: string;
+  onChange: (arg1: string, arg2: string | boolean) => void;
+  onBlur: (arg1: string, arg2: boolean) => void;
+  value: string | boolean;
+  errorText?: string;
+  showError?: boolean;
 }
 
-const FormItem: React.SFC<IPropTypes> = ({
+const FormItem: React.SFC<PropTypes> = ({
   children,
   name,
   onChange,

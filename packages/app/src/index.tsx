@@ -18,7 +18,7 @@ ReactDOM.render(
       <Routes />
     </Router>
   </Provider>,
-  document.getElementById('root') as HTMLElement
+  document.getElementById('root') as HTMLElement,
 );
 
 registerServiceWorker();

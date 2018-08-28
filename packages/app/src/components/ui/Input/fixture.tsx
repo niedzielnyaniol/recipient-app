@@ -7,7 +7,7 @@ const onChange = (e: React.SyntheticEvent) => {
   action(target.value);
 };
 
-const onBlur = () => { action('onBlur') };
+const onBlur = () => { action('onBlur'); };
 
 export default [
   {
@@ -50,5 +50,5 @@ export default [
       onChange,
       showError: true,
     },
-  }
-]
+  },
+];
