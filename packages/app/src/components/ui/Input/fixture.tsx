@@ -1,11 +1,7 @@
-import * as React from 'react';
 import action from '../../../utils/action';
 import Input from './';
 
-const onChange = (e: React.SyntheticEvent) => {
-  const target = e.target as HTMLInputElement;
-  action(target.value);
-};
+const onChange = (value: string) => { action(value); };
 
 const onBlur = () => { action('onBlur'); };
 

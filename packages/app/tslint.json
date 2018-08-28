@@ -1,5 +1,8 @@
 {
   "extends": ["../../tslint.json", "tslint-react"],
+  "rules": {
+    "jsx-no-lambda": true
+  },
   "linterOptions": {
     "exclude": [
       "config/**/*.js",

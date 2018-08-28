@@ -23,9 +23,8 @@ const FormItem: React.SFC<PropTypes> = ({
     errorText,
     name,
     onBlur: () => { onBlur(name, true); },
-    onChange: (e: React.SyntheticEvent) => {
-      const target = e.target as HTMLInputElement;
-      onChange(name, target.value);
+    onChange: (value: string | boolean) => {
+      onChange(name, value);
     },
     showError,
     value,
