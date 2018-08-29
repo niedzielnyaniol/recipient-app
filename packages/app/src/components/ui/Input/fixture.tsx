@@ -47,4 +47,15 @@ export default [
       showError: true,
     },
   },
+  {
+    component: Input,
+    name: 'withLabel',
+    props: {
+      label: 'label',
+      name: 'name',
+      onBlur,
+      onChange,
+      value: '',
+    },
+  },
 ];

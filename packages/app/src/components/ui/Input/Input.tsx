@@ -3,14 +3,28 @@ import _isFunction from 'lodash/isFunction';
 import * as React from 'react';
 import noop from '../../../utils/noop';
 
+interface PropTypes {
+  onChange?: (arg1: string) => void;
+  label?: string;
+  name?: string;
+  onBlur?: () => void;
+  value?: string;
+  errorText?: string;
+  showError?: boolean;
+  size?: 'large' | 'default' | 'small';
+  placeholder?: string;
+}
+
 class Input extends React.PureComponent<PropTypes> {
   static defaultProps = {
     errorText: '',
+    label: '',
     name: '',
     onBlur: noop,
     onChange: noop,
     placeholder: '',
     showError: false,
+    size: 'default',
     value: '',
   };
 
@@ -40,6 +54,7 @@ class Input extends React.PureComponent<PropTypes> {
       <Form.Item
         validateStatus={this.showError}
         help={this.help}
+        label={this.props.label}
       >
         <AInput
           name={this.props.name}
@@ -47,20 +62,11 @@ class Input extends React.PureComponent<PropTypes> {
           onBlur={this.props.onBlur}
           value={this.props.value}
           placeholder={this.props.placeholder}
+          size={this.props.size}
         />
       </Form.Item>
     );
   }
-}
-
-interface PropTypes {
-  onChange?: (arg1: string) => void;
-  name?: string;
-  onBlur?: () => void;
-  value?: string;
-  errorText?: string;
-  showError?: boolean;
-  placeholder?: string;
 }
 
 export default Input;
