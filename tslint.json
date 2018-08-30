@@ -1,5 +1,5 @@
 {
-  "defaultSeverity": "warn",
+  "defaultSeverity": "error",
   "extends": ["tslint:latest", "tslint-config-airbnb"],
   "jsRules": {},
   "rules": {
@@ -13,7 +13,8 @@
     "object-shorthand-properties-first": false,
     "no-submodule-imports": false,
     "member-access": false,
-    "no-shadowed-variable": false
+    "no-shadowed-variable": false,
+    "ter-arrow-parens": false
   },
   "rulesDirectory": []
 }
