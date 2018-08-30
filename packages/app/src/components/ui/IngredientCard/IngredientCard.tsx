@@ -2,10 +2,15 @@ import * as React from 'react';
 
 import { Card, Icon } from 'antd';
 import EditMeta from './components/EditMeta';
+import Photo from './components/Photo';
+
 import { InitialValues } from './IngredientCard.types';
+
+import { BodyWrapper } from './IngredientCard.styles';
 
 interface PropTypes {
   categories: string;
+  image?: string;
   name: string;
   onSave: (values: InitialValues) => Promise<void>;
   title: string;
@@ -61,23 +66,25 @@ class IngredientCard extends React.Component<PropTypes, StateTypes> {
       <Card
         hoverable
         style={{ cursor: 'auto' }}
-        cover={<div>elo</div>}
+        cover={<Photo image={this.props.image} isEdit={this.state.isEdit} />}
         actions={this.state.isEdit ? this.editActions : this.actions}
         loading={this.state.loading}
       >
-        {
-          this.state.isEdit ? (
-            <EditMeta
-              onSave={this.onSave}
-              initialValues={this.initialValues}
-            />
-          ) : (
-            <Card.Meta
-              title={this.props.title}
-              description={this.props.categories}
-            />
-          )
-        }
+        <BodyWrapper isEdit={this.state.isEdit} >
+          {
+            this.state.isEdit ? (
+              <EditMeta
+                onSave={this.onSave}
+                initialValues={this.initialValues}
+              />
+            ) : (
+              <Card.Meta
+                title={this.props.title}
+                description={this.props.categories}
+              />
+            )
+          }
+        </BodyWrapper>
       </Card>
     );
   }

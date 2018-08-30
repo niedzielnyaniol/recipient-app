@@ -6,7 +6,6 @@ import { InitialValues } from '../../IngredientCard.types';
 
 import FormItem from '../../../FormItem';
 import Input from '../../../Input';
-import { Form } from 'antd';
 
 interface PropTypes {
   initialValues: InitialValues;
@@ -20,14 +19,14 @@ class EditMeta extends React.PureComponent<PropTypes> {
     values,
     handleSubmit,
   }: RenderForm) => (
-    <Form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit}>
       <FormItem
         name="name"
         onBlur={setFieldTouched}
         onChange={setFieldValue}
         value={values.name}
       >
-        <Input label="name: " />
+        <Input/>
       </FormItem>
       <FormItem
         name="categories"
@@ -35,9 +34,9 @@ class EditMeta extends React.PureComponent<PropTypes> {
         onChange={setFieldValue}
         value={values.categories}
       >
-        <Input label="categories: " size="small" />
+        <Input size="small" />
       </FormItem>
-    </Form>
+    </form>
   )
 
   render() {

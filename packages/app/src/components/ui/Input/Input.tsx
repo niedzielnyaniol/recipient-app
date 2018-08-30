@@ -55,6 +55,7 @@ class Input extends React.PureComponent<PropTypes> {
         validateStatus={this.showError}
         help={this.help}
         label={this.props.label}
+        style={{ margin: 0 }}
       >
         <AInput
           name={this.props.name}
