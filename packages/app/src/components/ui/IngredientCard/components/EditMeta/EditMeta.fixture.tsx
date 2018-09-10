@@ -1,16 +1,20 @@
 import EditMeta from './';
 import action from '../../../../../utils/action';
-import { InitialValues } from '../../IngredientCard.types';
+
+const setFieldTouched = (name: string, isTouched: boolean) => { action(name, isTouched); };
+const setFieldValue = (name: string, value: string) => { action(name, value); };
 
 export default[
   {
     component: EditMeta,
     name: 'defaultView',
     props: {
-      initialValues: {
+      setFieldTouched,
+      setFieldValue,
+      values: {
+        categories: '',
         name: '',
       },
-      onSave: (values: InitialValues) => action(values),
     },
   },
 ];

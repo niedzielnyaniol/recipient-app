@@ -24,13 +24,16 @@ const IconWrapper = styled.div`
 `;
 
 const Image = styled.img`
-  width: 100%;
+  display:block;
+  max-width: 100%;
   height: 248px;
+  margin: 0 auto;
 `;
 
 const ImageWrapper: any = styled.div`
   opacity: 1;
   transition: .3s;
+  border-bottom: 1px solid #e8e8e8;
 
   ${(props: any) => props.isEdit && css`
     position: absolute;
