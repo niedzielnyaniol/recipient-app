@@ -1,8 +1,9 @@
 import styled, { css } from 'styled-components';
+import theme from '../../../theme';
 
 const BodyWrapper: any = styled.div`
   height: 53px;
-  transition: .3s;
+  transition: ${theme.animationDuration};
 
   ${(props: any) => props.isEdit && css`
     height: 78px;
@@ -11,7 +12,7 @@ const BodyWrapper: any = styled.div`
 
 const CardWrapper: any = styled.div`
   opacity: 1;
-  transition: .3s;
+  transition: ${theme.animationDuration};
 
   ${(props: any) => props.isSubmitting && css`
     opacity: .5;

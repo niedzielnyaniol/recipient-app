@@ -1,4 +1,5 @@
 import styled, { css } from 'styled-components';
+import theme from '../../../../../theme';
 
 const DropzoneWrapper = styled.div`
   position: relative;
@@ -32,8 +33,8 @@ const Image = styled.img`
 
 const ImageWrapper: any = styled.div`
   opacity: 1;
-  transition: .3s;
-  border-bottom: 1px solid #e8e8e8;
+  transition: ${theme.animationDuration};
+  border-bottom: 1px solid ${theme.grayBorderColor};
 
   ${(props: any) => props.isEdit && css`
     position: absolute;
